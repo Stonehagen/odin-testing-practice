@@ -66,3 +66,19 @@ export const ceasarCipher = (string, shift) => {
 
   return ceasarStringArr.join('');
 };
+
+export const analyzeArray = (numbers) => {
+  const { length } = numbers;
+  const average = Math.floor(
+    numbers.reduce((partSum, a) => partSum + a, 0) / length,
+  );
+  const min = Math.min(...numbers);
+  const max = Math.max(...numbers);
+
+  return {
+    average,
+    min,
+    max,
+    length,
+  };
+};
