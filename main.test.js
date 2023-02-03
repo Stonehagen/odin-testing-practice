@@ -1,4 +1,4 @@
-import { capitalize, reverseString, calculator } from './main';
+import { capitalize, reverseString, calculator, ceasarCipher } from './main';
 
 describe('capatilize module', () => {
   test('capitalize the word test to be Test', () => {
@@ -24,5 +24,11 @@ describe('calculator object', () => {
   });
   test('multiplay 4 by 4 tobe 16', () => {
     expect(calculator.multiply(4, 4)).toBe(16);
+  });
+});
+
+describe('ceasarCipher module', () => {
+  test('convert Zorry my FriNd. with shift 9 to Ixaah vh OarWm.', () => {
+    expect(ceasarCipher('Zorry my FriNd.', 9)).toBe('Ixaah vh OarWm.');
   });
 });
